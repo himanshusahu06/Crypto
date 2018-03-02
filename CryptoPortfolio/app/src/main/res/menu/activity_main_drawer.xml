@@ -10,16 +10,18 @@
             android:title="Settings" />
     </group>
 
-    <item android:title="Communicate">
-        <menu>
-            <!--<item-->
-                <!--android:id="@+id/nav_help"-->
-                <!--android:icon="@drawable/ic_help_circle"-->
-                <!--android:title="Help" />-->
-            <item
-                android:id="@+id/nav_about"
-                android:icon="@drawable/ic_account"
-                android:title="About Us" />
-        </menu>
-    </item>
+    <item
+        android:id="@+id/nav_about"
+        android:icon="@drawable/ic_account"
+        android:title="About Us" />
+
+    <!--<item android:title="A">-->
+        <!--<menu>-->
+            <!--&lt;!&ndash;<item&ndash;&gt;-->
+                <!--&lt;!&ndash;android:id="@+id/nav_help"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:icon="@drawable/ic_help_circle"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:title="Help" />&ndash;&gt;-->
+
+        <!--</menu>-->
+    <!--</item>-->
 </menu>
