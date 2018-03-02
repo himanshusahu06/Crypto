@@ -157,11 +157,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             Intent intent = new Intent(this, SettingsActivity.class);
             drawer.closeDrawer(GravityCompat.START);
             startActivity(intent);
-        } else if (id == R.id.nav_help) {
-            Intent intent = new Intent(this, HelpActivity.class);
-            drawer.closeDrawer(GravityCompat.START);
-            startActivity(intent);
-        } else if (id == R.id.nav_about) {
+        }
+// else if (id == R.id.nav_help) {
+//            Intent intent = new Intent(this, HelpActivity.class);
+//            drawer.closeDrawer(GravityCompat.START);
+//            startActivity(intent);
+//        }
+        else if (id == R.id.nav_about) {
             Intent intent = new Intent(this, AboutActivity.class);
             drawer.closeDrawer(GravityCompat.START);
             startActivity(intent);

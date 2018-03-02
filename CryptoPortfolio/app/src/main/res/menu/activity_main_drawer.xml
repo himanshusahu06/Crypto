@@ -12,10 +12,10 @@
 
     <item android:title="Communicate">
         <menu>
-            <item
-                android:id="@+id/nav_help"
-                android:icon="@drawable/ic_help_circle"
-                android:title="Help" />
+            <!--<item-->
+                <!--android:id="@+id/nav_help"-->
+                <!--android:icon="@drawable/ic_help_circle"-->
+                <!--android:title="Help" />-->
             <item
                 android:id="@+id/nav_about"
                 android:icon="@drawable/ic_account"

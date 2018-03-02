@@ -37,4 +37,7 @@
     <string name="pref_bittrex_show_holdings">pref_bittrex_show_holdings</string>
     <string name="pref_bittrex_show_open_orders">pref_bittrex_show_open_orders</string>
     <string name="bittrex_setting_preference">bittrex_setting_preference</string>
+    <string name="app_intro">Cryptocurrency portfolio is single app where you can track all your bitcoin / altcoins investment, open orders
+        , live market from various exchanges / wallet such as bittrex, binance etc. This app is to view your investments only, trading is not supported yet.
+    </string>
 </resources>
