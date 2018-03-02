@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="General Settings">
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="@string/pref_general_hide_appbar"
+            android:title="Hide App Bar"
+            android:summary="for maximum visibilty (recommended)" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="Bittrex Settings"
+        android:key="pref_bittrex_storage_settings">
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="@string/pref_bittrex_show_holdings"
+            android:title="Show Account Balance"/>
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="@string/pref_bittrex_show_open_orders"
+            android:title="Show Open Orders" />
+        <Preference
+            android:key="@string/bittrex_setting_preference"
+            android:title="Manage Bittrex Credentials"/>
+    </PreferenceCategory>
+</PreferenceScreen>

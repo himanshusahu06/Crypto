@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/AppTheme.NoActionBarStyle"
+    tools:context="com.crypto.portfolio.cryptoportfolio.activity.WelcomeActivity">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/sliderViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    
+    <View
+        android:alpha="0.5"
+        android:layout_above="@id/dotLayout"
+        android:background="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="12sp"
+        android:layout_height="1dp"
+        />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/dotLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="45sp"
+        android:gravity="center"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/slider_btn_skip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:background="@null"
+        android:text="skip"
+        android:layout_marginBottom="8dp"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
+    <Button
+        android:text="next"
+        android:id="@+id/slider_btn_next"
+        android:textColor="@android:color/white"
+        android:background="@null"
+        android:textSize="16sp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    
+</RelativeLayout>

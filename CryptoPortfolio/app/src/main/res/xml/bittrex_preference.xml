@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditTextPreference
+        android:title="Bittrex Key"
+        android:summary="read only"
+        android:key="BITTREX_KEY"
+        android:dialogTitle="Bittrex Key" />
+    <EditTextPreference
+        android:key="BITTREX_SECRET"
+        android:title="Bittrex Secret"
+        android:summary="read only"
+        android:dialogTitle="Bittrex Secret" />
+</PreferenceScreen>
