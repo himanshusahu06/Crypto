@@ -16,6 +16,8 @@ import android.view.MenuItem;
 import com.crypto.portfolio.cryptoportfolio.R;
 import com.crypto.portfolio.cryptoportfolio.fragment.TabbedFragment;
 import com.crypto.portfolio.cryptoportfolio.utils.PreferenceUtils;
+import com.google.android.gms.ads.MobileAds;
+
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -29,6 +31,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        //AdMob app ID: ca-app-pub-2098005055065962~9486378879
+        MobileAds.initialize(this, "ca-app-pub-2098005055065962~9486378879");
 
         registerOnSharedPreferenceChangeListener();
 
