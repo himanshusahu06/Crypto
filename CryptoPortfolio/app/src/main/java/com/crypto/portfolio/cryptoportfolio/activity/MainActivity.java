@@ -16,10 +16,21 @@ import android.view.MenuItem;
 import com.crypto.portfolio.cryptoportfolio.R;
 import com.crypto.portfolio.cryptoportfolio.fragment.TabbedFragment;
 import com.crypto.portfolio.cryptoportfolio.utils.PreferenceUtils;
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.gms.ads.MobileAds;
+
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     Boolean hideAppBar;
+
+    private AdView mAdView;
+
+    private InterstitialAd mInterstitialAd;
+
 
     SharedPreferences.OnSharedPreferenceChangeListener onSharedPreferenceChangeListener;
 
@@ -29,6 +40,30 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        if (PreferenceUtils.getString(getString(R.string.bittrex_key), this) != null
+                && PreferenceUtils.getString(getString(R.string.bittrex_secret), this) != null ) {
+            //AdMob app ID: ca-app-pub-2098005055065962~9486378879
+            MobileAds.initialize(this, "ca-app-pub-2098005055065962~9486378879");
+
+            // ad request
+            mAdView = findViewById(R.id.adView);
+            AdRequest adRequest = new AdRequest.Builder().build();
+            mAdView.loadAd(adRequest);
+
+            // interstitial ad
+            mInterstitialAd = new InterstitialAd(this);
+            mInterstitialAd.setAdUnitId("ca-app-pub-2098005055065962/1269865550");
+            mInterstitialAd.loadAd(new AdRequest.Builder().build());
+
+            mInterstitialAd.setAdListener(new AdListener() {
+                @Override
+                public void onAdLoaded() {
+                    // Code to be executed when an ad finishes loading.
+                    mInterstitialAd.show();
+                }
+            });
+        }
 
         registerOnSharedPreferenceChangeListener();
 

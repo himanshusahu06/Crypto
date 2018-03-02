@@ -75,7 +75,7 @@ public class BittrexGetAccountBalanceAsyncTask extends AsyncTask<Void, Void, Acc
         final AlertDialog.Builder builder = new AlertDialog.Builder(context);
         builder
                 .setTitle("Invalid API key or secret")
-                .setMessage("Please use correct api key and secret. Setting > Bittrex api key.")
+                .setMessage("Please use correct api key and secret.\nGo to  Setting > Manage Bittrex Credentials to change bittrex api key or secret.")
                 .setIcon(R.drawable.ic_invalid_key)
                 .setCancelable(true)
                 .setNegativeButton("OK", new DialogInterface.OnClickListener() {
