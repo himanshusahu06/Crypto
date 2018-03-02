@@ -62,26 +62,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     // Code to be executed when an ad finishes loading.
                     mInterstitialAd.show();
                 }
-
-                @Override
-                public void onAdFailedToLoad(int errorCode) {
-                    // Code to be executed when an ad request fails.
-                }
-
-                @Override
-                public void onAdOpened() {
-                    // Code to be executed when the ad is displayed.
-                }
-
-                @Override
-                public void onAdLeftApplication() {
-                    // Code to be executed when the user has left the app.
-                }
-
-                @Override
-                public void onAdClosed() {
-                    // Code to be executed when when the interstitial ad is closed.
-                }
             });
         }
 
