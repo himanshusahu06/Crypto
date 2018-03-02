@@ -16,12 +16,16 @@ import android.view.MenuItem;
 import com.crypto.portfolio.cryptoportfolio.R;
 import com.crypto.portfolio.cryptoportfolio.fragment.TabbedFragment;
 import com.crypto.portfolio.cryptoportfolio.utils.PreferenceUtils;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
 
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     Boolean hideAppBar;
+
+    private AdView mAdView;
 
     SharedPreferences.OnSharedPreferenceChangeListener onSharedPreferenceChangeListener;
 
@@ -34,6 +38,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         //AdMob app ID: ca-app-pub-2098005055065962~9486378879
         MobileAds.initialize(this, "ca-app-pub-2098005055065962~9486378879");
+
+        // ad request
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
         registerOnSharedPreferenceChangeListener();
 
