@@ -36,13 +36,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        //AdMob app ID: ca-app-pub-2098005055065962~9486378879
-        MobileAds.initialize(this, "ca-app-pub-2098005055065962~9486378879");
+        if (PreferenceUtils.getString(getString(R.string.bittrex_key), this) != null
+                && PreferenceUtils.getString(getString(R.string.bittrex_secret), this) != null ) {
+            //AdMob app ID: ca-app-pub-2098005055065962~9486378879
+            MobileAds.initialize(this, "ca-app-pub-2098005055065962~9486378879");
 
-        // ad request
-        mAdView = findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
+            // ad request
+            mAdView = findViewById(R.id.adView);
+            AdRequest adRequest = new AdRequest.Builder().build();
+            mAdView.loadAd(adRequest);
+        }
 
         registerOnSharedPreferenceChangeListener();
 
