@@ -74,7 +74,7 @@ public class BittrexState {
                 if (marketSummaryDTO != null) {
                     getBalanceDTO.setCurrentPrice(marketSummaryDTO.getLast());
                     totalBtc += getBalanceDTO.getCurrentPrice() * getBalanceDTO.getBalance();
-                } else {
+                } else if (getBalanceDTO.getCurrency().equals("BTC")){
                     // BTC-BTC case
                     totalBtc += getBalanceDTO.getBalance();
                 }

@@ -30,6 +30,6 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Portfolio for Bittrex and binance" />
+        android:text="Portfolio for bitcoin / altcoin investments" />
 
 </LinearLayout>
